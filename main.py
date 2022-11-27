@@ -19,7 +19,10 @@ def create_table(language: str):
 
 
 while True:
-    data = input("<text_language> <text>\n")
+    try:
+        data = input("<text_language> <text>\n")
+    except KeyboardInterrupt:
+        break
 
     text = data[3:]
     text_language = data[:2]
